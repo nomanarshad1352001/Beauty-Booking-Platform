@@ -1,0 +1,62 @@
+import { Location } from '@/lib/types';
+
+const defaultHours = {
+  monday: { open: '09:00', close: '19:00', isClosed: false },
+  tuesday: { open: '09:00', close: '19:00', isClosed: false },
+  wednesday: { open: '09:00', close: '19:00', isClosed: false },
+  thursday: { open: '09:00', close: '20:00', isClosed: false },
+  friday: { open: '09:00', close: '20:00', isClosed: false },
+  saturday: { open: '10:00', close: '18:00', isClosed: false },
+  sunday: { open: '00:00', close: '00:00', isClosed: true },
+};
+
+export const locations: Location[] = [
+  {
+    id: 'loc_001',
+    name: 'SoHo Studio',
+    address: '142 Wooster Street',
+    city: 'New York',
+    state: 'NY',
+    zip: '10012',
+    phone: '(212) 555-0134',
+    email: 'soho@solvestudio.com',
+    imageUrl: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80',
+    isActive: true,
+    hours: defaultHours,
+    createdAt: '2024-01-15T09:00:00Z',
+    updatedAt: '2024-05-20T11:30:00Z',
+  },
+  {
+    id: 'loc_002',
+    name: 'Beverly Hills Suite',
+    address: '9560 Wilshire Blvd, Suite 300',
+    city: 'Beverly Hills',
+    state: 'CA',
+    zip: '90212',
+    phone: '(310) 555-0198',
+    email: 'bh@solvestudio.com',
+    imageUrl: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=800&q=80',
+    isActive: true,
+    hours: {
+      ...defaultHours,
+      sunday: { open: '11:00', close: '17:00', isClosed: false },
+    },
+    createdAt: '2024-02-01T10:00:00Z',
+    updatedAt: '2024-06-01T13:00:00Z',
+  },
+  {
+    id: 'loc_003',
+    name: 'Miami Beach Atelier',
+    address: '1655 Collins Ave',
+    city: 'Miami Beach',
+    state: 'FL',
+    zip: '33139',
+    phone: '(305) 555-0276',
+    email: 'miami@solvestudio.com',
+    imageUrl: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80',
+    isActive: true,
+    hours: defaultHours,
+    createdAt: '2024-03-10T08:30:00Z',
+    updatedAt: '2024-06-12T16:45:00Z',
+  },
+];
